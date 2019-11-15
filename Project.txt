@@ -1,0 +1,64 @@
+  @FXML
+    void delete(MouseEvent event) throws IOException {
+    	String delsong = list.getSelectionModel().getSelectedItem();
+    	Scanner sc1 = new Scanner(f);
+    	Scanner sc2 = new Scanner(f1);
+		ArrayList<String> delarray = new ArrayList<String>();
+		ArrayList<String> delarray1 = new ArrayList<String>();
+    	while(sc2.hasNext())
+    	{
+    		String ds = sc2.nextLine();
+    		if(ds.equalsIgnoreCase(delsong))
+    		{
+    		continue;
+    		}
+    		delarray.add(ds);
+    	}
+    	PrintWriter pw1 = new PrintWriter(new FileWriter(f1,false));
+    	for(int d=0;d<delarray.size();d++)
+    	pw1.write(delarray.get(d)+"\n");
+    	pw1.close();
+    	while(sc1.hasNext())
+    	{
+    		String ds1 = sc1.nextLine();
+    		String deletesong = ds1.substring(0,ds1.indexOf("|"));
+    		if(deletesong.equalsIgnoreCase(delsong))
+    		{
+    		continue;
+    		}
+    		delarray1.add(ds1);
+    	}
+    	PrintWriter pw2 = new PrintWriter(new FileWriter(f,false));
+    	for(int j=0;j<delarray1.size();j++)
+    	pw2.write(delarray1.get(j)+"\n");
+    	pw2.close();
+    	sc1.close();
+    	sc2.close();
+    	update();
+   }
+
+
+
+
+	
+	public void update()
+	{
+		ObservableList<String> wordsList = FXCollections.observableArrayList();
+		f=new File("C:\\Users\\Praveen.Prabhu\\Downloads\\MusicPlayer-20180516T191305Z-001\\MusicPlayer\\src\\application\\songs");
+		try
+    	{
+			sc=new Scanner(f);
+		} 
+    	catch (FileNotFoundException e) 
+    	{
+			e.printStackTrace();
+		}
+    	while(sc.hasNextLine())
+    	{
+    		String s=sc.nextLine();
+    		wordsList.add(s.substring(0,s.indexOf('|') ));
+    	}
+    	
+    	list.setItems(wordsList);
+    	list.getSelectionModel().select(0);
+	}

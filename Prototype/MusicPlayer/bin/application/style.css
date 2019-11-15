@@ -1,0 +1,20 @@
+.linear-grad-to-bottom{
+     -fx-background-color: linear-gradient(to bottom, #000000, #800000);
+}
+
+.linear-grad-to-top{
+     -fx-background-color: linear-gradient(to top, #000000, #800000);
+}
+
+.linear{
+	-fx-background-color: linear-gradient(to bottom, #000000, #ffffff);
+}
+
+.linear-t{
+	-fx-background-color: linear-gradient(to top, #000000, #ffffff);
+}
+
+.progress-indicator{
+	-fx-progress-color: #808080;
+}
+

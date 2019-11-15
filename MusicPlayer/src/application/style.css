@@ -1,0 +1,23 @@
+.linear-grad-to-bottom{
+     -fx-background-color: linear-gradient(to bottom, #000000, #800000);
+}
+
+.linear-grad-to-top{
+     -fx-background-color: linear-gradient(to top, #000000, #800000);
+}
+
+.progress-indicator{
+	-fx-progress-color: #808080;
+}
+
+.button {
+    -fx-background-color: #ffffff; 
+    -fx-border: none;
+   -fx-padding: 15px 32px;
+   -fx-text-align: center;
+   -fx-text-decoration: none;
+   -fx-display: inline-block;
+   -fx-font-size: 16px;
+   -fx-background-image: url("C:/Workspace/MusicPlayer/src/applicationpl.jpg");
+   
+   }

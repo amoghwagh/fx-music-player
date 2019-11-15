@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.media.MediaView?>
+
+<AnchorPane fx:id="mainpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="689.0" prefWidth="836.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <Button fx:id="rr" layoutX="45.0" layoutY="548.0" mnemonicParsing="false" onMouseClicked="#rewind" prefHeight="25.0" prefWidth="41.0" text="&lt;&lt;" />
+      <Button fx:id="ff" layoutX="356.0" layoutY="548.0" mnemonicParsing="false" onMouseClicked="#fastforward" prefHeight="25.0" prefWidth="41.0" text="&gt;&gt;" />
+      <Button fx:id="pp" layoutX="192.0" layoutY="548.0" mnemonicParsing="false" onMouseClicked="#playpause" prefHeight="25.0" prefWidth="68.0" text="PLAY" />
+      <Button fx:id="nextbutton" layoutX="275.0" layoutY="548.0" mnemonicParsing="false" onMouseClicked="#next" prefHeight="25.0" prefWidth="68.0" text="NEXT" />
+      <Button fx:id="prevbutton" layoutX="99.0" layoutY="548.0" mnemonicParsing="false" onMouseClicked="#prev" prefHeight="25.0" prefWidth="79.0" text="PREV" />
+      <MediaView fitHeight="200.0" fitWidth="200.0" layoutX="189.0" layoutY="217.0" />
+      <AnchorPane layoutX="420.0" layoutY="7.0" prefHeight="570.0" prefWidth="382.0">
+         <children>
+            <MediaView fitHeight="200.0" fitWidth="200.0" />
+            <ListView fx:id="list" layoutX="45.0" layoutY="50.0" prefHeight="366.0" prefWidth="279.0" />
+            <Button fx:id="addbutton" layoutX="87.0" layoutY="441.0" mnemonicParsing="false" onMouseClicked="#add" text="ADD" />
+            <Button fx:id="delbutton" layoutX="152.0" layoutY="441.0" mnemonicParsing="false" onMouseClicked="#delete" text="DELETE" />
+            <Button fx:id="searchbutton" layoutX="243.0" layoutY="441.0" mnemonicParsing="false" onAction="#loadnext" text="SEARCH" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="check" disable="true" layoutX="747.0" layoutY="637.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="48.0" text="check" />
+   </children>
+</AnchorPane>
